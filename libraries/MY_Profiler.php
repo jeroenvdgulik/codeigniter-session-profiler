@@ -14,15 +14,15 @@
  * @category	Libraries
  * @author		Jeroen v.d. Gulik <http://isset.nl>
  * @license		DBAD License v1.0 <http://philsturgeon.co.uk/code/dbad-license>
- * @version		0.1
+ * @version		0.2
  */
 
 class MY_Profiler extends CI_Profiler {
 
- 	function MY_Profiler($config = array())
+ 	function __construct($config = array())
 	{
 		$this->_available_sections[] = 'session';
-		parent::CI_Profiler($config);
+		parent::__construct($config);
 	}
 
     function _compile_session()
